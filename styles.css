@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #000;
+    color: #66ccff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #66ccff;
+}
+
+ul {
+    list-style: none;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 2px solid red;
+    position: relative;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: red;
+}
+
+nav ul.menu {
+    display: flex;
+    gap: 30px;
+}
+
+nav ul.menu > li {
+    position: relative;
+    padding: 10px 0;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #66ccff;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #000;
+    top: 100%;
+    left: 0;
+    border: 1px solid red;
+    min-width: 200px;
+    z-index: 1000;
+}
+
+.submenu li {
+    padding: 10px;
+}
+
+.submenu li:hover {
+    background-color: #111;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.hero {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero-content p {
+    color: #ccc;
+}
+
+.welcome {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.welcome h1 {
+    font-size: 2.5rem;
+    color: red;
+    margin-bottom: 20px;
+}
+
+.welcome p {
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid red;
+    border-radius: 10px;
+    padding: 20px;
+    color: #66ccff;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+.menu-icon {
+    display: block;
+}
+
+nav ul.menu {
+    display: none;
+    flex-direction: column;
+    background-color: #000;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    border: 1px solid red;
+    z-index: 1000;
+}
+
+#menu-toggle:checked + .menu-icon + nav ul.menu {
+    display: flex;
+}
+
+nav ul.menu li {
+    text-align: left;
+    padding: 10px 20px;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+    position: relative;
+    top: 0;
+    border: none;
+}
+
+.submenu {
+    position: relative;
+    background: none;
+    border: none;
+}
+
+.submenu li {
+    padding: 8px 10px;
+}
+}
+
+span a{
+    text-decoration: underline;
+}
